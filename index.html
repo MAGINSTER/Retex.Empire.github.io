@@ -1,88 +1,125 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090a0b">
-  <meta name="description" content="RETEX EMPIRE — семья Arizona RP, сервер Tucson. Единство. Влияние. Наследие.">
-  <title>RETEX EMPIRE — Arizona RP | Tucson</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{--gold:#d7ad62;--gold2:#f2d69a;--bg:#090a0b;--panel:#111315;--muted:#9b9b98;--line:rgba(215,173,98,.22);--white:#f4f1e9}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Manrope,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
-    .noise{position:fixed;inset:0;pointer-events:none;opacity:.035;z-index:5;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
-    .topline{height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}header{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 7vw;border-bottom:1px solid rgba(255,255,255,.07);position:absolute;top:3px;width:100%;z-index:10;background:rgba(8,9,10,.55);backdrop-filter:blur(14px)}
-    .brand{display:flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:900;letter-spacing:2px;font-size:23px}.crest{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);transform:rotate(45deg);font-size:17px}.crest span{transform:rotate(-45deg)}nav{display:flex;gap:30px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#c5c1b8}nav a:hover{color:var(--gold)}.nav-cta{border:1px solid var(--line);padding:12px 17px;color:var(--gold);font-size:10px;letter-spacing:1.4px;text-transform:uppercase}
-    .hero{min-height:780px;height:100vh;max-height:980px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(5,6,7,.96) 0%,rgba(5,6,7,.77) 48%,rgba(5,6,7,.22) 100%),linear-gradient(0deg,#090a0b 0%,transparent 38%),url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2200&q=85') center/cover}
-    .hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 72% 45%,transparent 0%,rgba(0,0,0,.2) 55%,rgba(0,0,0,.55) 100%);pointer-events:none}.hero-content{position:relative;z-index:2;margin-left:12vw;margin-top:50px;max-width:760px}.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:14px}.eyebrow:before{content:"";width:38px;height:1px;background:var(--gold)}
-    h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(76px,12vw,158px);line-height:.78;letter-spacing:-2px;margin:28px 0 25px;font-weight:900;text-transform:uppercase;text-shadow:0 8px 40px #000}.hero h1 span{display:block;color:var(--gold);font-size:.78em;letter-spacing:9px;margin-top:15px}.hero-copy{max-width:440px;color:#c4c0b7;font-size:13px;line-height:2;margin:30px 0}.actions{display:flex;gap:14px;flex-wrap:wrap}.btn{padding:16px 25px;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:12px;transition:.25s}.btn-gold{background:var(--gold);color:#14110b}.btn-gold:hover{background:var(--gold2);transform:translateY(-3px)}.btn-ghost{border:1px solid rgba(255,255,255,.25);color:#eee}.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-    .hero-meta{position:absolute;z-index:2;right:7vw;bottom:72px;text-align:right;color:#aaa;font-size:9px;letter-spacing:2px;text-transform:uppercase}.hero-meta strong{display:block;color:var(--gold);font:700 22px 'Barlow Condensed';letter-spacing:3px;margin-top:6px}.scroll{position:absolute;left:7vw;bottom:65px;z-index:2;color:#aaa;font-size:9px;letter-spacing:2px;writing-mode:vertical-rl;display:flex;gap:12px;align-items:center}.scroll:before{content:"";height:50px;width:1px;background:var(--gold)}
-    section{padding:110px 10vw}.section-kicker{color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase}.section-title{font:800 clamp(42px,6vw,76px)/.95 'Barlow Condensed';text-transform:uppercase;margin:18px 0 24px;letter-spacing:1px}.section-title span{color:var(--gold)}.intro{max-width:650px;color:var(--muted);font-size:13px;line-height:2}
-    .about{display:grid;grid-template-columns:1.05fr .95fr;gap:9vw;align-items:center;background:#0d0f10}.about-art{min-height:430px;position:relative;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent),url('https://images.unsplash.com/photo-1605106702734-205df224ecce?auto=format&fit=crop&w=1200&q=85') center/cover;border:1px solid var(--line)}.about-art:before{content:"RE";position:absolute;bottom:-35px;right:-25px;font:900 150px 'Barlow Condensed';color:rgba(215,173,98,.14)}.stamp{position:absolute;top:24px;left:24px;border:1px solid var(--gold);padding:12px 16px;color:var(--gold);font-size:9px;letter-spacing:2px}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:35px;border:1px solid var(--line)}.stat{background:#0d0f10;padding:22px 16px}.stat b{font:800 34px 'Barlow Condensed';color:var(--gold);display:block}.stat small{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#999}
-    .values{background:#090a0b}.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:45px}.value{border:1px solid rgba(255,255,255,.09);padding:32px 27px;min-height:205px;background:linear-gradient(145deg,#151718,#0c0d0e);transition:.3s}.value:hover{border-color:var(--line);transform:translateY(-5px)}.value .num{font:700 13px 'Barlow Condensed';color:var(--gold);letter-spacing:2px}.value h3{font:700 27px 'Barlow Condensed';text-transform:uppercase;margin:23px 0 10px}.value p{font-size:11px;line-height:1.9;color:var(--muted);margin:0}
-    .ranks{background:#101213}.rank-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:45px}.rank{padding:25px 20px;border-top:2px solid var(--gold);background:#171a1b}.rank .roman{font:800 38px 'Barlow Condensed';color:var(--gold)}.rank h3{font:700 19px 'Barlow Condensed';text-transform:uppercase;margin:8px 0}.rank p{font-size:10px;color:var(--muted);line-height:1.7;margin:0}
-    .join{position:relative;text-align:center;background:linear-gradient(0deg,rgba(5,6,7,.92),rgba(5,6,7,.85)),url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1800&q=80') center/cover}.join .section-title{max-width:800px;margin:20px auto}.join .intro{margin:0 auto 30px}.join .actions{justify-content:center}
-    footer{padding:30px 7vw;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;color:#777;font-size:9px;letter-spacing:1.3px;text-transform:uppercase}footer b{color:var(--gold);font-family:'Barlow Condensed';font-size:18px;letter-spacing:2px}
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:850px){header{padding:0 5vw}nav{gap:14px}nav a{font-size:9px}.nav-cta{display:none}.hero-content{margin-left:8vw}.about{grid-template-columns:1fr;gap:55px}.about-art{min-height:330px}.rank-grid{grid-template-columns:repeat(2,1fr)}section{padding:85px 7vw}}
-    @media(max-width:560px){header{height:66px}.brand{font-size:19px}nav a:not(:last-child){display:none}.hero{min-height:700px;height:92vh;background-position:60% center}.hero-content{margin:40px 7vw 0}.hero h1{font-size:clamp(70px,18vw,105px)}.hero h1 span{letter-spacing:5px}.hero-meta{right:7vw;bottom:38px}.scroll{bottom:38px}.value-grid{grid-template-columns:1fr}.rank-grid{gap:8px}.rank{padding:19px 15px}.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:span 2}footer{gap:14px;flex-direction:column;text-align:center}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08060d">
+<meta name="description" content="RETEX EMPIRE — семья Arizona RP, сервер Tucson.">
+<title>RETEX EMPIRE 💜 Arizona RP · Tucson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07060b;--panel:#100d17;--panel2:#0d0b13;--purple:#c04cff;--purple2:#e6a7ff;--line:rgba(177,91,255,.22);--muted:#96909f;--white:#f7f2fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--white);font-family:Manrope,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.nav-wrap{position:sticky;top:0;z-index:20;background:rgba(7,6,11,.96);border-bottom:1px solid rgba(185,91,255,.22);backdrop-filter:blur(14px)}
+nav{display:flex;gap:14px;overflow-x:auto;white-space:nowrap;padding:17px 4%;scrollbar-width:thin;scrollbar-color:#5b4a69 transparent}
+nav a{flex:0 0 auto;border:1px solid rgba(168,91,255,.22);border-radius:17px;padding:15px 25px;font-size:15px;color:#e9e2ef;transition:.25s}
+nav a:hover,nav a.active{border-color:var(--purple);box-shadow:0 0 8px var(--purple),0 0 24px rgba(184,66,255,.32);color:#fff}
+main{max-width:1120px;margin:auto;padding:0 28px}
+.hero{text-align:center;padding:125px 0 48px;position:relative}
+.hero:before{content:"";position:absolute;width:min(700px,95vw);height:430px;left:50%;top:80px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(159,35,220,.17),transparent 68%);pointer-events:none}
+.hero h1{position:relative;font-size:clamp(36px,6vw,64px);line-height:1.45;margin:0 auto 26px;font-weight:800;letter-spacing:-1.5px;text-shadow:0 0 9px #c74aff,0 0 25px rgba(190,61,255,.8),0 0 55px rgba(160,35,220,.55)}
+.hero h1 .heart{color:#d75aff}
+.server{color:#a69bad;letter-spacing:5px;font-size:clamp(12px,2vw,19px);margin:22px 0 0}
+.glow-line{height:1px;max-width:760px;margin:55px auto 36px;background:linear-gradient(90deg,transparent,#b74aff,transparent);box-shadow:0 0 13px #a82aff}
+.motto{font-size:clamp(17px,3vw,26px);font-style:italic;color:#dcb4f5;margin:0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:65px 0 38px}
+.info-card{background:linear-gradient(145deg,#100d17,#0b0910);border:1px solid var(--line);border-radius:23px;padding:25px 18px;text-align:center;min-height:128px;display:flex;flex-direction:column;justify-content:center;gap:12px;transition:.25s}
+.info-card:hover{border-color:rgba(198,83,255,.65);box-shadow:0 0 20px rgba(163,55,231,.12);transform:translateY(-2px)}
+.info-card small{font-size:clamp(11px,1.8vw,16px);letter-spacing:2px;color:#9d94a7;text-transform:uppercase}
+.info-card strong{font-size:clamp(17px,2.5vw,27px);font-weight:700}
+.panel{border:1px solid var(--line);border-radius:25px;background:var(--panel2);padding:32px 34px;margin:26px 0 34px;box-shadow:0 8px 35px rgba(0,0,0,.14)}
+details.panel{padding:0;overflow:hidden}
+details summary{cursor:pointer;list-style:none;text-align:center;padding:28px 24px;color:#c85aff;font-size:clamp(19px,3vw,27px);font-weight:700;text-shadow:0 0 14px rgba(191,72,255,.55)}
+details summary::-webkit-details-marker{display:none}
+details summary:before{content:"▸ ";font-size:.8em}
+details[open] summary:before{content:"▾ "}
+.details-body{padding:0 30px 28px;color:#b7afc0;font-size:14px;line-height:1.9}
+h2{font-size:clamp(24px,4vw,34px);margin:0 0 18px;color:#f8f3fb}
+p{color:#b7afc0;line-height:1.9;margin:0 0 14px}
+.section-label{font-size:12px;letter-spacing:3px;color:#c65aff;text-transform:uppercase;margin-bottom:12px}
+.columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.mini-card{border:1px solid rgba(177,91,255,.17);border-radius:17px;padding:20px;background:#100d17}
+.mini-card h3{margin:0 0 9px;color:#e8c8ff;font-size:17px}
+ul{padding-left:20px;color:#b7afc0;line-height:2}
+.join{text-align:center;padding:42px 15px 70px}
+.join h2{text-shadow:0 0 18px rgba(186,69,255,.45)}
+.button{display:inline-block;margin:12px 7px 0;border:1px solid var(--purple);border-radius:14px;padding:14px 22px;color:#f0d8ff;box-shadow:0 0 15px rgba(180,65,255,.18);transition:.2s}
+.button:hover{background:rgba(177,69,255,.12);box-shadow:0 0 22px rgba(180,65,255,.35)}
+footer{text-align:center;border-top:1px solid rgba(177,91,255,.17);padding:26px 15px 32px;color:#827a8b;font-size:12px;letter-spacing:1px}
+footer strong{color:#c65aff}
+@media(max-width:650px){main{padding:0 18px}.hero{padding:90px 0 25px}.hero h1{font-size:clamp(33px,8vw,49px);letter-spacing:-1px}.server{letter-spacing:3px}.cards{gap:12px;margin:45px 0 25px}.info-card{min-height:112px;padding:18px 9px;border-radius:19px}.info-card small{letter-spacing:1px}.panel{padding:25px 21px;border-radius:21px}.columns{grid-template-columns:1fr}.details-body{padding:0 21px 23px}nav{gap:10px;padding:13px 16px}nav a{padding:13px 19px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
 </head>
 <body>
-<div class="noise"></div><div class="topline"></div>
-<header>
-  <a class="brand" href="#top"><span class="crest"><span>R</span></span> RETEX EMPIRE</a>
-  <nav><a href="#about">О семье</a><a href="#values">Принципы</a><a href="#ranks">Иерархия</a><a href="#join">Вступить</a></nav>
-  <a class="nav-cta" href="#join">Стать частью семьи ↗</a>
-</header>
-<main id="top">
-  <section class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">Arizona Role Play · Tucson</div>
-      <h1>Retex<span>Empire</span></h1>
-      <p class="hero-copy">Мы не ищем лёгких путей. Мы создаём собственную историю, держим слово и движемся только вперёд. Это больше, чем семья. Это наследие.</p>
-      <div class="actions"><a class="btn btn-gold" href="#about">Узнать о нас <span>↗</span></a><a class="btn btn-ghost" href="#join">Присоединиться</a></div>
-    </div>
-    <div class="scroll">ЛИСТАЙТЕ ВНИЗ</div>
-    <div class="hero-meta">ОФИЦИАЛЬНАЯ СЕМЬЯ<strong>SERVER TUCSON</strong></div>
-  </section>
-  <section class="about" id="about">
-    <div class="about-art reveal"><div class="stamp">EST. ARIZONA RP · TUCSON</div></div>
-    <div class="reveal"><div class="section-kicker">01 / Наша история</div><h2 class="section-title">Больше, чем<br><span>просто семья</span></h2>
-      <p class="intro">RETEX EMPIRE — объединение игроков Arizona RP на сервере Tucson. Нас связывают общие цели, взаимное уважение и желание оставить свой след в истории штата. Мы ценим командную работу, дисциплину и людей, на которых можно положиться.</p>
-      <div class="stats"><div class="stat"><b>01</b><small>Общий путь</small></div><div class="stat"><b>∞</b><small>Амбиции</small></div><div class="stat"><b>100%</b><small>Командный дух</small></div></div>
-    </div>
-  </section>
-  <section class="values" id="values">
-    <div class="reveal"><div class="section-kicker">02 / Кодекс семьи</div><h2 class="section-title">Наши <span>принципы</span></h2><p class="intro">Фундамент, на котором строится RETEX EMPIRE. Не просто слова — ориентиры для каждого участника.</p></div>
-    <div class="value-grid">
-      <article class="value reveal"><div class="num">01 — LOYALTY</div><h3>Верность</h3><p>Мы уважаем союзников, поддерживаем своих и не бросаем команду в трудный момент.</p></article>
-      <article class="value reveal"><div class="num">02 — RESPECT</div><h3>Уважение</h3><p>Сила семьи начинается с уважения. К каждому участнику, его времени и его труду.</p></article>
-      <article class="value reveal"><div class="num">03 — AMBITION</div><h3>Амбиции</h3><p>Ставим цели выше вчерашних достижений и вместе работаем над общим результатом.</p></article>
-    </div>
-  </section>
-  <section class="ranks" id="ranks">
-    <div class="reveal"><div class="section-kicker">03 / Организация</div><h2 class="section-title">Структура <span>империи</span></h2><p class="intro">У каждого своя роль и зона ответственности. Состав и должности будут заполнены актуальными игровыми никами.</p></div>
-    <div class="rank-grid">
-      <article class="rank reveal"><div class="roman">I</div><h3>Глава семьи</h3><p>Стратегия, развитие и ключевые решения.</p></article>
-      <article class="rank reveal"><div class="roman">II</div><h3>Заместители</h3><p>Управление составом и координация направлений.</p></article>
-      <article class="rank reveal"><div class="roman">III</div><h3>Старший состав</h3><p>Организация активности и помощь участникам.</p></article>
-      <article class="rank reveal"><div class="roman">IV</div><h3>Участники</h3><p>Основа семьи и единая команда.</p></article>
-    </div>
-  </section>
-  <section class="join" id="join">
-    <div class="section-kicker">04 / Твой следующий шаг</div><h2 class="section-title">Твоя история может<br>начаться <span>здесь</span></h2>
-    <p class="intro">Хочешь стать частью RETEX EMPIRE? Свяжись с руководством семьи в игре или через наши официальные контакты.</p>
-    <div class="actions"><a class="btn btn-gold" href="https://Arizona-rp.com/" target="_blank" rel="noopener">Arizona RP ↗</a><a class="btn btn-ghost" href="#top">Вернуться наверх ↑</a></div>
-  </section>
+<div class="nav-wrap"><nav aria-label="Основная навигация">
+<a class="active" href="#home">Главная</a><a href="#charter">Устав семьи</a><a href="#info">Основная информация</a><a href="#team">Состав</a><a href="#join">Вступление</a>
+</nav></div>
+<main>
+<section class="hero" id="home">
+<h1><span class="heart">💜</span> Welcome to<br>RETEX EMPIRE <span class="heart">💜</span></h1>
+<div class="server">ARIZONA RP · TUCSON</div>
+<div class="glow-line"></div>
+<p class="motto">Единство. Верность. Наше наследие.</p>
+</section>
+<section class="cards" id="info" aria-label="Информация о семье">
+<div class="info-card"><small>Сервер</small><strong>Tucson</strong></div>
+<div class="info-card"><small>Название</small><strong>RETEX EMPIRE</strong></div>
+<div class="info-card"><small>Основана</small><strong>Уточняется</strong></div>
+<div class="info-card"><small>Основатель</small><strong>Уточняется</strong></div>
+<div class="info-card"><small>Руководитель</small><strong>Уточняется</strong></div>
+<div class="info-card"><small>Участников</small><strong>Уточняется</strong></div>
+</section>
+<details class="panel" open>
+<summary>Биография семьи</summary>
+<div class="details-body">
+<p>RETEX EMPIRE — семья Arizona Role Play на сервере Tucson. Мы объединяем игроков, которые стремятся развиваться, добиваться общих целей и создавать собственную историю в игровом мире.</p>
+<p>Наша сила — в сплочённости, взаимном уважении и готовности поддержать друг друга. Каждый участник вносит свой вклад в общее дело и помогает семье становиться сильнее.</p>
+</div>
+</details>
+<section class="panel" id="charter">
+<div class="section-label">01 / Правила и ответственность</div>
+<h2>Устав семьи</h2>
+<p>Устав определяет основные принципы поведения и взаимодействия участников RETEX EMPIRE.</p>
+<div class="columns">
+<div class="mini-card"><h3>Уважение</h3><p>Относитесь с уважением к участникам семьи, союзникам и другим игрокам.</p></div>
+<div class="mini-card"><h3>Верность</h3><p>Не подводите команду, соблюдайте договорённости и поддерживайте своих.</p></div>
+<div class="mini-card"><h3>Дисциплина</h3><p>Соблюдайте правила Arizona RP и внутренние решения руководства семьи.</p></div>
+<div class="mini-card"><h3>Репутация</h3><p>Помните, что действия каждого участника влияют на имя RETEX EMPIRE.</p></div>
+</div>
+</section>
+<section class="panel" id="team">
+<div class="section-label">02 / Люди и роли</div>
+<h2>Основная информация</h2>
+<p>Здесь будут размещены актуальные сведения о руководстве, участниках и внутренней структуре семьи.</p>
+<div class="columns">
+<div class="mini-card"><h3>Руководство</h3><p>Имена и игровые ники руководителей будут добавлены после подтверждения.</p></div>
+<div class="mini-card"><h3>Состав семьи</h3><p>Список участников и их должности будут опубликованы здесь.</p></div>
+</div>
+</section>
+<section class="panel">
+<div class="section-label">03 / Наши ценности</div>
+<h2>Кодекс RETEX EMPIRE</h2>
+<ul><li>Единство и взаимопомощь.</li><li>Честность и уважение к каждому участнику.</li><li>Ответственность за свои поступки.</li><li>Стремление к развитию и общим победам.</li></ul>
+</section>
+<section class="join" id="join">
+<div class="section-label">04 / Присоединяйся к нам</div>
+<h2>Стань частью RETEX EMPIRE</h2>
+<p>Хочешь вступить в семью? Свяжись с руководством и узнай об условиях набора.</p>
+<a class="button" href="https://arizona-rp.com/" target="_blank" rel="noopener">Arizona RP ↗</a>
+<a class="button" href="#home">Наверх ↑</a>
+</section>
 </main>
-<footer><b>RETEX EMPIRE</b><span>Arizona Role Play · Tucson</span><span>© <span id="year"></span> ALL RIGHTS RESERVED</span></footer>
+<footer><strong>RETEX EMPIRE</strong><br>ARIZONA ROLE PLAY · TUCSON<br>© <span id="year"></span> Все права защищены</footer>
 <script>
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
+const links=[...document.querySelectorAll('nav a')];
+const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-25% 0px -65% 0px'});
+sections.forEach(s=>observer.observe(s));
 </script>
-</body></html>
+</body>
+</html>
